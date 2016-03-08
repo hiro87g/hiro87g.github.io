@@ -42,6 +42,13 @@ header{
 			}
 			.imgArea {
 				height: 150px;
+				figcaption {
+					ul {
+						padding: 5px;
+						li {
+						}
+					}
+				}
 			}
 		}
 	}

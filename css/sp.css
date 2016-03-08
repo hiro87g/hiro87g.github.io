@@ -38,3 +38,6 @@ header {
 #works > ul > li .imgArea {
   height: 150px;
 }
+#works > ul > li .imgArea figcaption ul {
+  padding: 5px;
+}
