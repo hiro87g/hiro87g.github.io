@@ -5,6 +5,7 @@ var uglify = require("gulp-uglify");
 var browser = require("browser-sync");
 var plumber = require("gulp-plumber");
 var compass = require('gulp-compass');
+var tinyping = require('gulp-tinypng-compress');
 // var runSequence = require('run-sequence');
 
 gulp.task("server", function() {
@@ -51,6 +52,14 @@ gulp.task("autoprefixer", function() {
 
 gulp.task("html", function() {
 	browser.reload()
+});
+
+gulp.task('tinypng', function () {
+    gulp.src('img/**/*.{png,jpg,jpeg}')
+        .pipe(tinyping({
+            key: 'nw4UwJY8RSxlkzr4P5IMAcVwvK34UG5i' // TinyPNGのAPI Key
+        }))
+        .pipe(gulp.dest('./img'));
 });
 
 gulp.task("default",['server'], function() {
