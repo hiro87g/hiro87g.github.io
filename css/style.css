@@ -65,7 +65,6 @@ html {
 #hero {
   height: 300px;
   text-align: center;
-  background: #CCC;
   color: #fff;
   font-weight: bold;
   background: #43cea2;
@@ -85,6 +84,7 @@ html {
 #hero span {
   font-weight: normal;
   font-size: 2rem;
+  line-height: 120%;
 }
 
 h2 {
@@ -175,11 +175,7 @@ header ul li a {
 }
 #about #personal .txtArea dl dd {
   float: left;
-}
-#about #personal .txtArea dl dd:before {
-  content: ":";
-  display: block;
-  float: left;
+  word-break: break-all;
 }
 #about #personal .txtArea dl dd a {
   color: #33A3A3;

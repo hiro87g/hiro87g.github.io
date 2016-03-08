@@ -25,7 +25,7 @@
 
 	//typing
 	$("#typed").typed({
-		strings: ["Welcome!!","I'm a web creater.", "My skills are design,","coding,","derection.","And Using these,","I can create a good Web page of UI / UX.", "If interested in me,","Let's create something interesting together!!"],
+		strings: ["Welcome!","I'm a web creater.", "My skills are design,","coding,","derection.","And Using these,","I can create a good Web page of UI / UX.", "If interested in me,","Let's create something interesting together!!"],
 		typeSpeed: 30,
 		backDelay: 500,
 		loop: false,
