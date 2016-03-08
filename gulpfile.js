@@ -57,14 +57,13 @@ gulp.task("html", function() {
 gulp.task('tinypng', function () {
     gulp.src('img/**/*.{png,jpg,jpeg}')
         .pipe(tinyping({
-            key: 'nw4UwJY8RSxlkzr4P5IMAcVwvK34UG5i' // TinyPNGのAPI Key
+            key: 'nw4UwJY8RSxlkzr4P5IMAcVwvK34UG5i'
         }))
         .pipe(gulp.dest('./img'));
 });
 
 gulp.task("default",['server'], function() {
 	gulp.watch(["js/**/*.js","!js/min/**/*.js"],["js"]);
-	// gulp.watch("sass/**/*.scss",["sass"]);
 	gulp.watch("sass/**/*.scss",["compass"]);
 	gulp.watch("css/**/*.css",["autoprefixer"]);
 	gulp.watch("./**/*.html",["html"]);
