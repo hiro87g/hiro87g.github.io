@@ -1,0 +1,48 @@
+#hero {
+	height: 180px;
+	h1 {
+		padding-top: 40px;
+		margin-bottom: 20px;
+		font-size: 2.5rem;
+	}
+	span {
+		font-weight: normal;
+		font-size: 1.2rem;
+	}
+}
+header{
+	top: 180px;
+}
+#about, #skills, #works {
+	padding: 30px 10px;
+}
+#about {
+	#personal {
+		.imgArea {
+			img {
+				width: 120px;
+				height: 120px;
+				border-radius: 120px;
+			}
+		}
+		.txtArea {
+			h3 {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+#works {
+	>ul {
+		>li {
+			width: 50%;
+			padding: 0 10px 0 0;
+			&:nth-child(even) {
+				padding-right: 0;
+			}
+			.imgArea {
+				height: 150px;
+			}
+		}
+	}
+}
