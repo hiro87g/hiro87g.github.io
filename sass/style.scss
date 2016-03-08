@@ -1,0 +1,241 @@
+@import "compass/reset/";
+
+html {
+	font-size: 16px;
+	line-height: 130%;
+	color: #333;
+	font-family:Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+}
+#hero {
+	height: 300px;
+	text-align: center;
+	background: #CCC;
+	color: #fff;
+	font-weight: bold;
+	background: #43cea2; /* fallback for old browsers */
+	background: linear-gradient(-45deg,#185a9d,#43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	h1 {
+		font-size: 3rem;
+		text-align: center;
+		padding-top: 100px;
+		margin-bottom: 50px;
+		letter-spacing: 2px;
+		line-height: 110%;
+	}
+	span {
+		// white-space:pre;
+		font-weight: normal;
+		font-size: 2rem;
+	}
+}
+
+h2 {
+	text-align: center;
+	border-bottom: 2px solid #000;
+	display: table;
+	margin: auto;
+	font-size: 1.5rem;
+	padding-bottom: 5px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	margin-top: -50px;
+	padding-top: 50px;
+
+}
+
+header{
+	position: absolute;
+	top: 300px;
+	width: 100%;
+	ul {
+		overflow: hidden;
+		padding: 10px 0;
+		background: #333;
+
+		li {
+			float: left;
+			width: 33%;
+			text-align: center;
+			a {
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+	}
+}
+#about, #skills, #works {
+	padding: 30px 20px;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+}
+
+#about {
+	margin-top: 40px;
+	#personal {
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		.imgArea {
+			text-align: left;
+			text-align: right;
+			img {
+				width: 150px;
+				height: 150px;
+				border-radius: 150px;
+				margin-right: 10px;
+			}
+		}
+		.txtArea {
+			text-align: left;
+			h3 {
+				font-size: 1.5rem;
+				margin-bottom: 10px;
+			}
+			dl {
+				overflow: hidden;
+				font-size: 0.9rem;
+				dt {
+					float: left;
+					clear: both;
+
+				}
+				dd {
+					float: left;
+					&:before {
+						content: ":";
+						display: block;
+						float: left;
+					}
+					a {
+						color: #33A3A3;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#skills {
+	background: #eee;
+	dt {
+		margin-top: 10px;
+	}
+	// thermometer styles
+	.thermometer-outer {
+		background: #ccc;
+		border: none;
+		border-radius: 0;
+	}
+	.thermometer-outer-h {
+		height: 10px;
+		width: auto;
+	}
+	.thermometer-outer-v {
+		height: 200px;
+		width: 10px;
+	}
+	.thermometer-inner {
+		background: #33A3A0;
+	}
+	.thermometer-inner-h {
+		height: 10px;
+	}
+	.thermometer-inner-v {
+		width: 10px;
+	}
+}
+
+#works {
+	>ul {
+		display: flex;
+		flex-wrap:wrap;
+		>li {
+			width: 33.3%;
+			box-sizing:border-box;
+			margin-bottom: 20px;
+			padding: 0 20px 0 0;
+
+			.imgArea {
+				border: 1px solid #ccc;
+				position:relative;				
+				height: 200px;
+				overflow: hidden;
+				// display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				img {
+					width: 100%;
+				}
+				figcaption {
+					position:absolute;
+					left:0;
+					top:0;
+					width: 100%;
+					height: 100%;
+					display:none;
+					color:#fff;
+					text-align: left;
+					// background:#33A3A0;
+					background: #000;
+					opacity: 0.7;
+					ul {
+						padding: 10px;
+						display: table-cell;
+						vertical-align: middle;
+						li {
+							font-size: 0.8rem;
+							word-break: break-all;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+footer {
+	background: #eee;
+	text-align: center;
+	font-size: 0.8rem;
+	padding: 10px 0;
+	margin-top: -20px;
+}
+
+
+/* code for animated blinking cursor */
+.typed-cursor{
+	opacity: 1;
+	font-weight: 100;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	-ms-animation: blink 0.7s infinite;
+	-o-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+	// display: none;
+}
+
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-ms-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-o-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
